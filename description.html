@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<title>javascruples</title>
+<script>
+var myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["JavaScript", "Gaming", "Foxes"]
+    }
+];
+ 
+ console.log(document.getElementById("name"))
+</script>
+<script>
+function myFunction(name, prop) {
+console.log(name); console.log(prop);
+	for(let i=0;i<contacts.length; i++) {
+	if (contacts[i]['firstName']==name) {
+	if (contacts[i][prop]!=undefined) {
+	return contacts[i][prop];
+	} else {
+		return 'No such property';
+}
+} else {
+	continue;
+}
+
+}
+return 'No such contact ' 
+};
+</script>
+</head>
+<body>
+<p id='demo'> helllo <a href= index.html>moebius</a></p>
+
+<label for="name">first-name:</label>
+<input type="text" id="x" name="name" value="Harry">
+<label for="property">property:</label>
+<input type="text" id="y" name="property">
+<button onclick="document.getElementById('demo').innerHTML=myFunction(x.value, y.value)";>button</button>
+</body>
+</html>
